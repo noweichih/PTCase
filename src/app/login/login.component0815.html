@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8/">
+  <meta name="viewport" content="width = device-width">
+  <style>
+    form{line-height: 1.5em;}
+    form>input, form>label
+    {padding: 200px 200px; border: 10px; border-radius: 10px;}
+  </style>
+  <title>Login</title>
+</head>
+<!--button class="myappbtn" >button test</button>-->
+<body>
+  <h2>系統驗證</h2>
+  <form>
+    <div class="form-group">
+      <label for="username">帳  號  :   </label>
+        <input type="text" id="username" name="username" placeholder="Username" #usernameIn>
+    </div>
+    <br/>
+    <div class="form-group">
+      <label for="password">密  碼  :   </label>
+      <input type="password" id="password" name="password" #passwordIn>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary myappbtn" (click)="login()">登  入</button>
+    <!--button mat-mini-fab  title="進入系統"  (click)="login()">登  入
+      <img src="../../assets/images/ed7-Photoroom.png"   height="40px" width="60px">
+    </button-->
+    <!--button class="myappbtn" routerLink="/form/23/3">protoc!!</button-->
+    <!--button mat-raised-button color="primary" routerLink="/form">Login formEdit World！</button>-->
+  </form>
+</body>
+
+</html>
+<!--
+<div class="login-container">
+  <h2>系統登入</h2>
+  <form>
+    <div class="form-group">
+      <label for="username">帳號</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
+      <input type="text" [(ngModel)]="username" name="username" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label for="password">密碼</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="login()">系統登入</button>
+  </form>
+</div>
+-->

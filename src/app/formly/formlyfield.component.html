@@ -1,0 +1,37 @@
+
+<!--<h1>表單
+    <form [formGroup]="form" >
+    <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  </form>
+
+
+<tabset #tabset [(ngModel)]="activeTabId">
+  <tab *ngFor="let tab of tabs" [heading]="tab.label" [active]="tab.id === activeTabId">
+    <formly-form [model]="tab.model" [fields]="tab.fields" [form]="tab.form" [options]="options" (ngSubmit)="onSubmit()"></formly-form>
+  </tab>
+</tabset>
+
+<tabset #tabset [(ngModel)]="activeTabId">
+  <tab *ngFor="let tab of tabs" [heading]="tab.label" [active]="tab.id === activeTabId">
+    <formly-form *ngIf="tab.id === activeTabId" [model]="tab.model" [fields]="tab.fields" [form]="tab.form" [options]="options" (ngSubmit)="onSubmit()"></formly-form>
+  </tab>
+</tabset>
+
+
+<tabset #tabset [(ngModel)]="activeTabId" type="tabs" justify="center">
+  <tab *ngFor="let tab of tabs" [heading]="tab.label" [active]="tab.id === activeTabId">
+    <formly-form *ngIf="activeTab && tab.id === activeTabId" [model]="activeTab.model" [fields]="activeTab.fields" [form]="activeTab.form" [options]="options" (ngSubmit)="onSubmit()"></formly-form>
+  </tab>
+</tabset>
+-->
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <formly-form [model]="model" [fields]="fields" [options]="options"></formly-form>
+  <button type="submit">Submit</button>
+</form>
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+<h1>機關專案</h1>
+<table>
+    <thead>
+      <tr>
+        <th>機關名稱      </th>
+        <th>專案代碼      </th>
+        <th>說明      </th>
+        <th>...   </th>
+      </tr>
+    </thead>
+    <tbody> 
+      <tr *ngFor="let eachproj of reguproj" [routerLink]="['/eachproj', eachproj.regucode]">
+        <td>{{ eachproj.regucode }}</td>
+        <td>{{ eachproj.projcode }}</td>
+        <td>{{ eachproj.proj }}</td>
+        <td>
+            <button [routerLink]="['/reguprojdoc', eachproj.regucode, eachproj.projcode]">查閱文件</button> 
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+<div>
+
+    <form>
+        <label for="regucode">機關名稱：</label>
+        <input type="text" id="regucode" [(ngModel)]="regucode"><br><br>
+        <label for="projcode">專案描述：</label>
+        <textarea id="projcode" ></textarea><br><br>
+        <!--<textarea id="projcode" [(ngModel)]="projcode"></textarea><br><br>
+        button type="button" (click)="register()">註冊</button>-->
+    </form> 
+ <!--   <tbody> 
+        <tr *ngFor="let eachproj of reguproj" >
+          <td>{{ eachproj.regucode }}</td>
+          <td>{{ eachproj.projcode }}</td>
+          <td>{{ eachproj.proj }}</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr *ngFor="let group of reguproj"> 
+          <th>{{ group }}</th>
+          <td *ngFor="let eachproj = group">{{ eachproj.projcode }}</td>
+          <td *ngFor="let eachproj = group">{{ eachproj.proj }}</td>
+        </tr>
+    </tbody>-->
+    <tbody>
+        <tr *ngFor="let item of reguproj"> 
+          <td mat-card>{{ item.regucode }}</td>
+          <td mat-card>{{ item.projcode }}</td>
+          <td mat-card>{{ item.proj }}</td>
+        </tr>
+      </tbody>
+
+     <!-- <mat-table [dataSource]="reguproj" class="mat-elevation-z8">
+        <ng-container matColumnDef="regucode">
+          <mat-header-cell *matHeaderCellDef>Regulation Code</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.regucode }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="projcode">
+          <mat-header-cell *matHeaderCellDef>Project Code</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.projcode }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="proj">
+          <mat-header-cell *matHeaderCellDef>Project Name</mat-header-cell>
+          <mat-cell *matCellDef="let element">{{ element.proj }}</mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row"></mat-row>
+      </mat-table>
+      -->
+
+</div>

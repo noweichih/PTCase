@@ -1,0 +1,30 @@
+<h1>公司專案全覽</h1>
+<button type="button" class = "btn btn-outline-primary" routerLink="/reguproj" >其他監管機關申請專案</button>
+<!--button type="button" class="btn btn-dark">Dark</button>-->
+<table>
+  <thead>
+    <tr>
+      <th>公司專案名稱      </th>
+      <th>專案代碼      </th>
+      <th>主持人/專案經理      </th>
+      <th>監管機關      </th>
+      <th>開案日期      </th>
+      <th>計畫ID        </th>
+      <th>...   </th>
+    </tr>
+  </thead>
+  <tbody> 
+    <tr *ngFor="let eachproj of projlist" [routerLink]="['/eachproj', eachproj.app_proj_id]">
+      <td>{{ eachproj.project_name }}</td>
+      <td>{{ eachproj.app_proj_code }}</td>
+      <td>{{ eachproj.manager }}</td>
+      <td>{{ eachproj.regulator_code }}</td>
+      <td>{{ eachproj.create_date  | date:'yyyy-MM-dd'}}</td>
+      <td>{{ eachproj.app_proj_id }}</td>
+      <td>
+        <button [routerLink]="['/appdoclist', eachproj.app_proj_id]">查閱文件</button> 
+        <!--<button >查閱文件</button>-->
+      </td>
+    </tr>
+  </tbody>
+</table>

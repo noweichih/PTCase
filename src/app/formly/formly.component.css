@@ -1,0 +1,19 @@
+.tab-pane {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control-label {
+    font-weight: bold;
+  }
+  
+  .form-check-label {
+    font-weight: normal;
+  }
+  
+  .btn-primary {
+    margin-top: 20px;
+  }

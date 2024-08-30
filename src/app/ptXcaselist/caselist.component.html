@@ -1,0 +1,31 @@
+<h1>個案全覽</h1>
+<button type="button" class = "btn btn-outline-primary" routerLink="/reguproj" >病人收案</button>
+<!--button type="button" class="btn btn-dark">Dark</button>-->
+<table>
+  <thead>
+    <tr>
+      <th>案別      </th>
+      <th>病人      </th>
+      <th>出生日期        </th>
+      <th>性別      </th>
+      <th>收案人      </th>
+      <th>收案日期      </th>
+      <th>個案流水號      </th>
+      <th>...   </th>
+    </tr>
+  </thead>
+  <tbody> 
+    <tr *ngFor="let eachcase of caselist" [routerLink]="['/eachcase', eachcase.caseid]">
+      <td>{{ eachcase.casetype }}</td>
+      <td>{{ eachcase.pat }}</td>
+      <td>{{ eachcase.birthdate | date:'yyyy-MM-dd'}}</td>
+      <td>{{ eachcase.gender }}</td>
+      <td>{{ eachcase.manager }}</td>
+      <td>{{ eachcase.startdate | date:'yyyy-MM-dd'}}</td>
+      <td>{{ eachcase.caseid }}</td>
+      <td>
+        <button [routerLink]="['/courselist', eachcase.caseid]">療程</button> 
+      </td>
+    </tr>
+  </tbody>
+</table>

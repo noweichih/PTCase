@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [fields]="fields" [model]="model" [options]="options" [form]="form" (modelChange)="onModelChange($event)"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit</button>
+
+  <button type="submit" class="btn btn-primary submit-button" >Submit2</button>
+  <button type="button" class="my-button-class" (click)="onClick()" >Add New Link</button>
+</form>
+
